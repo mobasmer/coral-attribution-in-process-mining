@@ -1,0 +1,148 @@
+{
+  "objectTypes": [
+    { "name": "Order", "attributes": [] },
+    { "name": "Invoice", "attributes": [] },
+    { "name": "User", "attributes": [] }
+  ],
+  "eventTypes": [
+    { "name": "Create Order", "attributes": [] },
+    { "name": "Prod. Plan", "attributes": [] },
+    { "name": "Create Invoice", "attributes": [] },
+    { "name": "Update Invoice", "attributes": [] },
+    { "name": "Clear Invoice", "attributes": [] },
+    { "name": "Shipment", "attributes": [] }
+  ],
+  "objects": [
+    { "id": "O1", "type": "Order", "attributes": [] },
+    { "id": "O2", "type": "Order", "attributes": [] },
+    { "id": "I1", "type": "Invoice", "attributes": [] },
+    { "id": "I2", "type": "Invoice", "attributes": [] },
+    { "id": "Sue", "type": "User", "attributes": [] },
+    { "id": "Xin", "type": "User", "attributes": [] },
+    { "id": "Ann", "type": "User", "attributes": [] }
+  ],
+  "events": [
+    {
+      "id": "e1",
+      "type": "Create Order",
+      "time": "2024-03-04T08:30:00",
+      "attributes": [],
+      "relationships": [
+        { "objectId": "O1", "qualifier": "order" },
+        { "objectId": "Sue", "qualifier": "resource" }
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "Prod. Plan",
+      "time": "2024-03-04T08:42:00",
+      "attributes": [],
+      "relationships": [
+        { "objectId": "O1", "qualifier": "order" },
+        { "objectId": "Xin", "qualifier": "resource" }
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "Create Order",
+      "time": "2024-03-04T08:30:20",
+      "attributes": [],
+      "relationships": [
+        { "objectId": "O2", "qualifier": "order" },
+        { "objectId": "Ann", "qualifier": "resource" }
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "Create Invoice",
+      "time": "2024-03-04T08:47:00",
+      "attributes": [],
+      "relationships": [
+        { "objectId": "O1", "qualifier": "order" },
+        { "objectId": "I1", "qualifier": "invoice" },
+        { "objectId": "Sue", "qualifier": "resource" }
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "Create Invoice",
+      "time": "2024-03-04T08:53:00",
+      "attributes": [],
+      "relationships": [
+        { "objectId": "O2", "qualifier": "order" },
+        { "objectId": "I2", "qualifier": "invoice" },
+        { "objectId": "Sue", "qualifier": "resource" }
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "Prod. Plan",
+      "time": "2024-03-04T09:05:00",
+      "attributes": [],
+      "relationships": [
+        { "objectId": "O1", "qualifier": "order" },
+        { "objectId": "Xin", "qualifier": "resource" }
+      ]
+    },
+    {
+      "id": "e6*",
+      "type": "Prod. Plan",
+      "time": "2024-03-04T09:05:00",
+      "attributes": [],
+      "relationships": [
+        { "objectId": "O2", "qualifier": "order" },
+        { "objectId": "Xin", "qualifier": "resource" }
+      ]
+    },
+    {
+      "id": "e7",
+      "type": "Update Invoice",
+      "time": "2024-03-04T09:18:00",
+      "attributes": [],
+      "relationships": [
+        { "objectId": "I2", "qualifier": "invoice" },
+        { "objectId": "Sue", "qualifier": "resource" }
+      ]
+    },
+    {
+      "id": "e8",
+      "type": "Clear Invoice",
+      "time": "2024-03-04T09:30:00",
+      "attributes": [],
+      "relationships": [
+        { "objectId": "I1", "qualifier": "invoice" },
+        { "objectId": "Xin", "qualifier": "resource" }
+      ]
+    },
+    {
+      "id": "e8*",
+      "type": "Clear Invoice",
+      "time": "2024-03-04T09:30:00",
+      "attributes": [],
+      "relationships": [
+        { "objectId": "I2", "qualifier": "invoice" },
+        { "objectId": "Xin", "qualifier": "resource" }
+      ]
+    },
+    {
+      "id": "e9",
+      "type": "Shipment",
+      "time": "2024-03-04T09:30:15",
+      "attributes": [],
+      "relationships": [
+        { "objectId": "O1", "qualifier": "order" },
+        { "objectId": "Sue", "qualifier": "resource" }
+      ]
+    },
+    {
+      "id": "e10",
+      "type": "Shipment",
+      "time": "2024-03-04T09:30:35",
+      "attributes": [],
+      "relationships": [
+        { "objectId": "O2", "qualifier": "order" },
+        { "objectId": "Sue", "qualifier": "resource" }
+      ]
+    }
+  ]
+}
